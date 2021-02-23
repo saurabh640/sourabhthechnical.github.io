@@ -1,0 +1,57 @@
+<html>
+<head>
+<title> Form for pizza order </title>
+<style>
+
+
+table,th,td {
+border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+<form action="save.php" method="POST">
+<?php include "connection.php";
+?>
+<table id="header-fixed">
+<thead>
+<th colspan="6">
+Pizza Shop 2.0
+</th>
+</thead>
+
+<tbody>
+<tr>
+<tr>
+<td>Name</td>
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<td>Pizza topping</td>
+<td><input type="radio" value="Supreme" name="pizza_topping">Supreme<br><input type="radio" value="Vegetarian" name="pizza_topping">Vegetarian
+
+<br><input type="radio" value="Hawaiian" name="pizza_topping">Hawaiian</td>
+</tr>
+<tr><td>Pizza Sauce</td>
+
+   <label for="pizza_sauce">
+  <td>     <select name="pizza_sauce">
+<option value="Tomato">Tomato</option>
+<option value="Potato">Potato</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>Optional Extras</td>
+<td><input type="checkbox" value="Extra Cheese" name="check_list[]">Extra Cheese
+<input type="checkbox" value="Gluten Free Base" name="check_list[]">Gluten Free Base
+</td>
+</tr>
+</tbody>
+<tr><th align="left" colspan="6">Delivery Instruction:<br><textarea name="delivery_instruction"></textarea>
+</th><tr>
+<th align="left" colspan="6"><button type="submit" name="register_btn">send my order</button></th></tr>
+</form>
+</body>
+</html
